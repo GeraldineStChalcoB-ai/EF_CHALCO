@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docentes Especializados</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="d-flex justify-content-between align-items-center px-3 py-2">
+  <h1 class="titulo">Ciencias Sociales</h1>
+
+  <button id="menu-btn" class="menu-btn">☰</button>
+</header>
+
+<div id="overlay" class="overlay"></div>
+
+<nav id="sideMenu" class="side-menu">
+  <a href="index.html">Inicio</a>
+  <a href="Descripcion.html">Descripción del Programa</a>
+  <a href="Docentes.html" class="active">Docentes Especializados</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<main class="pagina-info">
+  <h2 class="text-center">Equipo Docente</h2>
+
+  <ul class="lista-beneficios">
+      <li>Mg. Rosa García - Especialista en Investigación Social.</li>
+      <li>Dr. Miguel Torres - Sociología Política.</li>
+      <li>Mg. Ana Castillo - Gestión Social.</li>
+      <li>Dr. Walter Huamán - Métodos Cualitativos.</li>
+  </ul>
+</main>
+
+<footer class="footer">
+  <p>Facultad de Ciencias Sociales</p>
+  <p class="footer-copy">© <span id="anio"></span> Universidad Continental</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+ document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

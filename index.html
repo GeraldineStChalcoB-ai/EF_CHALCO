@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facultad de Ciencias Sociales</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- estilo -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="d-flex justify-content-between align-items-center px-3 py-2">
+  <h1 class="titulo">Ciencias Sociales</h1>
+
+  <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="sideMenu">
+      ☰
+  </button>
+</header>
+
+<div id="overlay" class="overlay" aria-hidden="true"></div>
+
+<nav id="sideMenu" class="side-menu" role="navigation" aria-label="Navegación principal" aria-hidden="true">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="Descripcion.html">Descripción del Programa</a>
+    <a href="Docentes.html">Docentes Especializados</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<main class="container mt-4" role="main">
+    <h2 class="text-center mb-4">Nuevo Programa Académico</h2>
+
+    <section>
+        <p class="text-center">
+            Bienvenido(a) a la presentación oficial del nuevo programa académico de la
+            Facultad de Ciencias Sociales. Explora la descripción del plan de estudios,
+            conoce al equipo docente y comunícate con nosotros.
+        </p>
+
+        <div class="text-center mt-4">
+            <img src="img/programa.jpeg" alt="Imagen del nuevo programa" class="img-fluid rounded">
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Facultad de Ciencias Sociales</p>
+    <p class="footer-copy">© <span id="anio"></span> Universidad Continental</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

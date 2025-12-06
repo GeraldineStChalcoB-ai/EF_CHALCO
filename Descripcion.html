@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descripción del Programa</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="d-flex justify-content-between align-items-center px-3 py-2">
+  <h1 class="titulo">Ciencias Sociales</h1>
+
+  <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="sideMenu">
+    ☰
+  </button>
+</header>
+
+<div id="overlay" class="overlay"></div>
+
+<nav id="sideMenu" class="side-menu" role="navigation">
+  <a href="index.html">Inicio</a>
+  <a href="Descripcion.html" class="active">Descripción del Programa</a>
+  <a href="Docentes.html">Docentes Especializados</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<main class="pagina-info">
+  <h2 class="text-center">Descripción del Nuevo Programa</h2>
+
+  <p>
+    El nuevo programa académico de la Facultad de Ciencias Sociales está orientado
+    a formar profesionales capaces de analizar y proponer soluciones a los principales
+    problemas sociales.
+  </p>
+
+  <p>
+    El plan de estudios combina teoría, investigación y prácticas profesionales,
+    brindando una formación sólida y actualizada.
+  </p>
+
+  <h3>Competencias del Perfil Profesional</h3>
+  <ul>
+      <li>Análisis crítico de contextos sociales.</li>
+      <li>Manejo de metodologías de investigación.</li>
+      <li>Propuesta de soluciones innovadoras.</li>
+      <li>Responsabilidad ética y compromiso ciudadano.</li>
+  </ul>
+</main>
+
+<footer class="footer">
+  <p>Facultad de Ciencias Sociales</p>
+  <p class="footer-copy">© <span id="anio"></span> Universidad Continental</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+ document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

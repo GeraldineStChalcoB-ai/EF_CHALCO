@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #f4f6ff; 
+    line-height: 1.6;
+}
+
+/* Para que el footer quede abajo */
+main, .pagina-info, .contacto-container {
+    flex: 1;
+}
+
+/* Accesibilidad */
+a:focus,
+button:focus {
+    outline: 3px solid #99b6ff;
+    outline-offset: 3px;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: #1e2a78;
+}
+
+/* Header */
+header {
+    background: #2A4FFF; 
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-block: 8px;
+}
+
+.titulo {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+/* Menú */
+.menu-btn {
+    cursor: pointer;
+    font-size: 26px;
+    background: #1e2a78;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 13px;
+    transition: 0.2s ease;
+}
+
+.menu-btn:hover {
+    background: #16215a;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100%;
+    background: #1e2a78;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 2000;
+    transition: left 0.25s ease-out;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    padding-left: 10px;
+    color: #99b6ff;
+}
+
+.side-menu.abierto {
+    left: 0;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1500;
+}
+
+.overlay.visible {
+    display: block;
+}
+
+/* Página general */
+.pagina-info {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* CONTENEDOR CONTACTO */
+.contacto-container {
+    max-width: 520px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO ORDENADO */
+.contacto-form label {
+    display: block;
+    font-weight: bold;
+    color: #1e2a78;
+    margin-top: 14px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #9ba7cc;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.contacto-form textarea {
+    min-height: 130px;
+}
+
+/* Botón */
+.contacto-form button {
+    background: #2A4FFF;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contacto-form button:hover {
+    background: #1e2a78;
+}
+
+/* Footer */
+.footer {
+    background: #1e2a78;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+}
+
+.footer-copy {
+    opacity: 0.9;
+}
+
+/* Responsive Tablets */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+/* Responsive Móviles */
+@media (max-width: 480px) {
+    header {
+        padding-inline: 15px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .menu-btn {
+        font-size: 22px;
+        padding: 6px 10px;
+    }
+
+    .pagina-info,
+    .contacto-container {
+        padding: 18px;
+    }
+
+    .side-menu {
+        width: 210px;
+    }
+}
